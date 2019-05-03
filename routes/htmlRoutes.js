@@ -40,12 +40,12 @@ module.exports = function (app) {
     )
   })
 
-  app.get("/create", (req, res) => {
-    res.render("create",
+  app.get("/submission", (req, res) => {
+    res.render("submission",
       {
-        style: "create.css",
-        script: "create.js",
-        title: "Create"
+        style: "submission.css",
+        script: "submission.js",
+        title: "Submission"
       });
   });
 
