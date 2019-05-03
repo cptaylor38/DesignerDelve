@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create artist test page</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="artist-container">
+                <h1>Artist</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th># of Posts</th>
+                            <th>See Artist's Posts</th>
+                            <th>New Post</th>
+                            <th>Delete Artist</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="form-row">
+                            <form id="artist-form">
+                                <td colspan="4">
+                                    <input placeholder="Enter a name" id="artist-name" type="text" />
+                                </td>
+                                <td><button type="submit" class="btn btn-success">Create Artist</button>
+                                </td>
+                            </form>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
