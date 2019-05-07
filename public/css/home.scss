@@ -1,0 +1,110 @@
+body
+{
+  background-color: white;
+}
+
+.testImg
+{
+  height: 600px;
+  width: 700px;
+  padding: 20px;
+}
+
+.row 
+{
+  flex-wrap: nowrap;
+  margin: auto;
+}
+
+#contentRow
+{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.contentContainer
+{
+  padding: 0;
+}
+
+.container2
+{
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+
+#homeHeader
+{
+  font-family: 'BeonRegular';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 84px;
+  padding: 20px;
+  font-weight: bold;
+  color: rgba(0,0,0,0.6);
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3)
+}
+
+.primaryContainer
+{
+  padding: 40px;
+}
+
+.createCol
+{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.categoryContainer 
+{
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+}
+
+.categoryField
+{
+  font-size: 34px;
+  flex: 1;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.flex {
+	display: flex;
+	box-sizing: border-box;
+}
+
+.row {
+	flex-flow: row wrap;
+}
+
+.col {
+	flex-flow: column wrap;
+}
+
+.element {
+  min-width: 100px;
+}
+
+.content {
+	flex: 1 100%;
+}
+
+.structure-1
+{
+  flex: 1 percentage(1/5);
+}
+
+
+
+
+
+
+
+
+

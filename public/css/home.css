@@ -1,0 +1,51 @@
+body {
+  background-color: white; }
+
+.testImg {
+  height: 600px;
+  width: 700px;
+  padding: 20px; }
+
+.row {
+  flex-wrap: nowrap;
+  margin: auto; }
+
+#contentRow {
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+.contentContainer {
+  padding: 0; }
+
+.container {
+  flex: 1;
+  padding: 0;
+  margin: 0; }
+
+#homeHeader {
+  font-family: 'BeonRegular';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 84px;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3); }
+  
+
+.primaryContainer {
+  padding: 40px; }
+
+.createCol {
+  display: flex;
+  flex-flow: column wrap; }
+
+.contentLink
+{
+  font-size: 34px;
+  text-align: center;
+  font-family: 'BeonRegular';
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3); 
+}

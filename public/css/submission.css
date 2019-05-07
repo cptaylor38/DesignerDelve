@@ -1,0 +1,125 @@
+body {
+    background-color: bisque;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline overline wavy green;
+}
+#mySidebar a {
+    position: absolute;
+    left: -185px;
+    transition: 0.4s;
+    padding: 15px;
+    width: 200px;
+    text-decoration: none;
+    font-size: 50px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+#mySidebar a:hover {
+    left: 0;
+}
+#home {
+    top: 35%;
+    height: 60px;
+    text-align: left;
+    background-image: linear-gradient(to bottom right, green, yellow);
+}
+#view {
+    top: 47%;
+    height: 60px;
+    text-align: left;
+    background-image: linear-gradient(to bottom right, yellow, green);
+}
+body {
+    font-family: "Lato", sans-serif;
+}
+#center {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    border: 3px solid black;
+}
+#returnBack {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+#artSubmitForm {
+    width: 91%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 45px;
+    height: 100%;
+    margin-top: 100px;
+}
+textarea {
+    width: 95%;
+    height: 225px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    float: right;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+.column1 {
+    float: left;
+    flex: 50%;
+}
+.column2 {
+    float: right;
+    flex: 50%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.row {
+    display: flex;
+}
