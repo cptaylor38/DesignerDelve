@@ -2,11 +2,11 @@ var db = require("../models");
 
 module.exports = function (app) {
   app.get("/", function (req, res) {
-    res.render("home",
+    res.render("landing",
       {
-        style: "home.css",
-        script: "home.js",
-        title: "Home, Welcome!"
+        style: "landing.css",
+        script: "landing.js",
+        title: "Welcome!"
       });
 
   });

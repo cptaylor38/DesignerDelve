@@ -1,68 +1,51 @@
-body
-{
-  background-color: gainsboro
-}
+body {
+  background-color: white; }
 
-#title
-{
+.testImg {
+  height: 600px;
+  width: 700px;
+  padding: 20px; }
+
+.row {
+  flex-wrap: nowrap;
+  margin: auto; }
+
+#contentRow {
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+.contentContainer {
+  padding: 0; }
+
+.container {
+  flex: 1;
+  padding: 0;
+  margin: 0; }
+
+#homeHeader {
+  font-family: 'BeonRegular';
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 84px;
   padding: 20px;
-}
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3); }
+  
 
-.testImg
-{
-  height: 600px;
-  width: 700px;
-  padding: 20px;
-}
+.primaryContainer {
+  padding: 40px; }
 
-.row 
-{
-  flex-wrap: nowrap;
-  margin: auto;
-}
-
-#contentRow
-{
+.createCol {
   display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-.contentContainer
-{
-  position: relative;
-}
+  flex-flow: column wrap; }
 
 .contentLink
 {
-  font-size: 32px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 660px;
-  margin-left: 4px;
-  padding: 10px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  visibility: hidden;
-}
-
-.contentLink p
-{
-  width: 100%;
-  margin-top: 40px;
-  font-size: 48px;
+  font-size: 34px;
   text-align: center;
-}
-
-.contentContainer:hover > .contentLink
-{
-  visibility: visible;
+  font-family: 'BeonRegular';
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3); 
 }
