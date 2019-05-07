@@ -4,10 +4,16 @@ body {
   }
   
   h1 {
+    font-family: 'Bungee Shade', cursive;
     font-size: 5em;
     width: 25%;
     color:black;
     line-height: 1em;
+  }
+  p {
+    font-family: 'Bungee Shade', cursive;  
+    font-size: 27px;
+    opacity: 0;
   }
   
   button {
@@ -19,14 +25,18 @@ body {
     padding: .5em 1em;
     cursor: pointer;
   }
+
+  
   
   .panel {
-    background-image: 'light.jpg';
+    background-image: url('black.jpg');
     position: absolute;
+    background-repeat: no-repeat;
     width: 55%;
     bottom: 0;
     right: 0;
-    background: #EAEAEA;
+    top: 60px;
+   // background: #EAEAEA;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 15% 7%;
@@ -36,6 +46,71 @@ body {
             transform-origin: bottom;
    
   }
+
+  .panel2 {
+    background-image: url('neon.jpg');
+    position: absolute;
+    background-repeat: no-repeat;
+    //background-repeat: no-repeat;
+    width: 55%;
+    bottom: 0;
+    right: 0;
+    top: 70px;
+    
+   // background: #EAEAEA;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 15% 7%;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+   
+  }
+
+  .panel3 {
+    background-image: url('zebra.jpg');
+    position: absolute;
+    //background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    width: 55%;
+    bottom: 0;
+    top: 70px;
+    right: 0;
+    
+   // background: #EAEAEA;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 15% 7%;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+   
+  }
+
+  .panel4 {
+    background-image: url('mountain.jpg');
+    position: absolute;
+    //background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    width: 55%;
+    bottom: 0;
+    top: 70px;
+    right: 0;
+    
+   // background: #EAEAEA;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 15% 7%;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+   
+  }
+
+  
   
   .panel img {
     
@@ -67,4 +142,37 @@ body {
             transform: scale(0);
   }
 
+  
+
+  h1 {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px rgb(194, 192, 192), 0 0 20px rgb(204, 203, 203), 0 0 30px #615e5f, 0 0 40px #615e5f, 0 0 50px #615e5f, 0 0 60px #615e5f, 0 0 70px #615e5f;
+    }
+    
+    to {
+      text-shadow: 0 0 20px rgb(214, 212, 212), 0 0 30px #050505, 0 0 40px #050505, 0 0 50px #050505, 0 0 60px #050505, 0 0 70px #050505, 0 0 80px #050505;
+    }
+  }
+
+  #cta {
+    font-family: 'Bungee Outline', cursive;
+    border-block-end-style: none;
+    border-color: white;
+    
+    
+}
+  #cta:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+   
+
+  }
 
