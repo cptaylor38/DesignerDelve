@@ -11,3 +11,14 @@ var myWidget = cloudinary.createUploadWidget({
 document.getElementById("upload_widget").addEventListener("click", function () {
     myWidget.open();
 }, false);
+
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    $('#mySidebar').css('border-right', '5px solid black');
+}
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    $('#mySidebar').css('border-right', 'none');
+}
