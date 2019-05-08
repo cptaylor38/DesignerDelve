@@ -15,25 +15,35 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     facebookURL: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      validate: {
+        isUrl: true
+      }
     },
     location: {
       type: DataTypes.STRING
     },
     linkedInURL: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      validate: {
+        isUrl: true
+      }
     },
     category: {
       type: DataTypes.STRING,
       allowNull: false
     },
     email: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      validate: {
+        isEmail: true
+      }
     },
     photoURL: {
       type: DataTypes.STRING,
       validate: {
-        allowNull: false
+        allowNull: false,
+        isUrl: true
       }
     },
     description: {

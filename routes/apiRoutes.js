@@ -22,12 +22,20 @@ module.exports = function (app) {
   });
 
 
-  // app.post("/api/Submissions", function (req, res) {
-  //   db.Submissions.create(req.body
-
-  //     ).then(function (dbSubmission) {
-  //     res.json(dbSubmission);
-  //   });
-  // });
+  app.post("/api/submissions", function (req, res) {
+    db.Submissions.create({
+      name: req.body.name,
+      artTitle: req.body.artTitle,
+      facebookURL: req.body.facebookURL,
+      location: req.body.location,
+      linkedInURL: req.body.linkedInURL,
+      category: req.body.category,
+      email: req.body.email,
+      photoURL: req.body.photoURL,
+      description: req.body.description
+    }).then(function (dbSubmission) {
+      res.json(dbSubmission);
+    });
+  });
 };
 
