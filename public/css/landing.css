@@ -1,18 +1,27 @@
 body {
   font-family: 'Montserrat';
-  padding: 9em; }
+   }
 
 h1 {
-  font-family: 'Bungee Shade', cursive;
   font-size: 5em;
   width: 25%;
-  color: black;
-  line-height: 1em; }
+  line-height: 1em;
+  font-family: 'BeonRegular';
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+}
 
 p {
+  margin-top: 50px;
   font-family: 'Bungee Outline', cursive;
   font-size: 27px;
-  opacity: 0; }
+  opacity: 0;
+  margin-left: 50px;
+  font-family: 'BeonRegular';
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+  
 
 button {
   background: none;
@@ -24,13 +33,13 @@ button {
   cursor: pointer; }
 
 .panel {
-  background-image: url("../images/black.jpg");
-  position: absolute;
+  background-image: url("https://images.pexels.com/photos/415206/pexels-photo-415206.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  position: relative;
   background-repeat: no-repeat;
-  width: 55%;
+  width: 100%;
   bottom: 0;
   right: 0;
-  top: 60px;
+  /* top: 60px; */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 15% 7%;
@@ -40,13 +49,13 @@ button {
   transform-origin: bottom; }
 
 .panel2 {
-  background-image: url("../images/neon.jpg");
+  background-image: url("../images/black.jpg");
   position: absolute;
-  background-repeat: no-repeat;
-  width: 55%;
+  background-size: cover;
+  width: 100%;
   bottom: 0;
   right: 0;
-  top: 70px;
+  /* top: 70px; */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 15% 7%;
@@ -56,12 +65,12 @@ button {
   transform-origin: bottom; }
 
 .panel3 {
-  background-image: url("../images/light.jpg");
+  background-image: url("../images/abstract-colorful-art.jpg");
   position: absolute;
-  background-repeat: no-repeat;
-  width: 55%;
+  background-size: cover;
+  width: 100%;
   bottom: 0;
-  top: 70px;
+  /* top: 70px; */
   right: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -87,10 +96,56 @@ button {
 .panel .box {
   width: 65%;
   height: 80%;
-  position: absolute;
+  position: relative;
   left: -7%;
   top: 15%;
   z-index: -1;
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0); }
+
+ .col-lg-6 .col-md-12 .col-sm-12
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  .row
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  .contentContainer
+  {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .panelClass
+  {
+    height: 100%;
+    width: 100%;
+  }
+
+  .leftLanding
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
+  }
+
+  .headerContent
+  {
+    padding: 10px;
+  }
+
+  .rightLanding
+  {
+    border-left: 5px solid black;
+  }
+
+  

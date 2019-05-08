@@ -1,59 +1,29 @@
 body {
-    background-color: bisque;
+    background-color: black;
+    color: black;
+    font-family: 'Gugi', cursive;
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+    font-weight: bolder;
 }
-h1 {
-    font-size: 50px;
-    text-align: center;
-    text-decoration: underline overline wavy green;
+
+
+#titleHeader
+{
+  text-align: center;
+  font-family: 'BeonRegular';
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+  font-weight: bolder;
 }
-#mySidebar a {
-    position: absolute;
-    left: -185px;
-    transition: 0.4s;
-    padding: 15px;
-    width: 200px;
-    text-decoration: none;
-    font-size: 50px;
-    color: white;
-    border-radius: 0 5px 5px 0;
+
+.headerJumbo
+{
+  background: white;
+  padding-bottom: 4rem;
 }
-#mySidebar a:hover {
-    left: 0;
-}
-#home {
-    top: 35%;
-    height: 60px;
-    text-align: left;
-    background-image: linear-gradient(to bottom right, green, yellow);
-}
-#view {
-    top: 47%;
-    height: 60px;
-    text-align: left;
-    background-image: linear-gradient(to bottom right, yellow, green);
-}
-body {
-    font-family: "Lato", sans-serif;
-}
-#center {
-    margin: auto;
-    width: 50%;
-    text-align: center;
-    border: 3px solid black;
-}
-#returnBack {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-}
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
+
 input[type=text],
 select {
     width: 100%;
@@ -64,6 +34,7 @@ select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 input[type=submit] {
     width: 100%;
     background-color: #4CAF50;
@@ -77,15 +48,7 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #45a049;
 }
-#artSubmitForm {
-    width: 91%;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin-left: 45px;
-    height: 100%;
-    margin-top: 100px;
-}
+
 textarea {
     width: 95%;
     height: 225px;
@@ -98,28 +61,132 @@ textarea {
     resize: none;
     float: right;
 }
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+
+.formContainer
+{
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.subForm
+{
+    display: flex;
+    flex-flow: column wrap;
+    background: gray;
+    padding: 40px;
+    border: 5px double rgb(255, 255, 255);
+    border-radius: 25px 25px 25px 25px;
+}
+
+.submitCol
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+#upload_widget
+{
+    width: 90%;
+    align-self: center;
+    margin-left: 25px;
+    background: black;
+    font-family: 'BeonRegular';
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+    border: none;
+    margin: 20px 0 20px 25px;
+}
+
+#upload_widget:hover
+{
+    background: white;
+    color: black;
+    font-size: 20px;
+}
+
+#submitbtn
+{
+    background: black;
+    font-size: 20px;
+    font-family: 'BeonRegular';
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+
+#submitbtn:hover
+{
+    background: white;
+    color: black;
+    font-size: 20px;
+}
+
+/* navbar items */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: grey;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: black;
+    text-align: left;
+    font-family: 'BeonRegular';
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+  }
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar a:hover {
+    color: #f1f1f1;
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(8, 8, 8, 0.3);
+  }
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    float: left;
+    outline-color: white;
+    border-radius: 10px;
+  }
+  .openbtn:hover {
+    background-color: grey;
+  }
+
+  .openbtn:focus{
+    outline: none;
+  }
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
     .sidebar {
-        padding-top: 15px;
+      padding-top: 15px;
     }
     .sidebar a {
-        font-size: 18px;
+      font-size: 18px;
     }
-}
-.column1 {
-    float: left;
-    flex: 50%;
-}
-.column2 {
-    float: right;
-    flex: 50%;
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.row {
-    display: flex;
-}
+  }
