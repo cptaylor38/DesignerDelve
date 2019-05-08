@@ -4,7 +4,7 @@ module.exports = function (app) {
   // Get all examples
   app.get("/api/submissions/:category/:state", function (req, res) {
 
-    db.Submissions.findAll(
+    db.Submission.findAll(
       {
         where: {
           category: `${req.params.category}`,
@@ -23,7 +23,7 @@ module.exports = function (app) {
 
 
   app.post("/api/submissions", function (req, res) {
-    db.Submissions.create({
+    db.Submission.create({
       name: req.body.name,
       artTitle: req.body.artTitle,
       facebookURL: req.body.facebookURL,

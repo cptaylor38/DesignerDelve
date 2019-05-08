@@ -1,13 +1,13 @@
 var myWidget = cloudinary.createUploadWidget({
-
+    cloudName: 'drjosejms',
+    uploadPreset: 'cptupload'
 }, (error, result) => {
-    console.log(result)
+    var imageURL;
     if (!error && result && result.event === "success") {
-        var imageURL = result.info.secure_url;
+        imageURL = result.info.secure_url;
         console.log('Done! Here is the image info: ', result.info.secure_url);
         postSubmit(imageURL);
     }
-    else (console.log(error));
 });
 
 document.getElementById("upload_widget").addEventListener("click", function () {
@@ -33,24 +33,27 @@ postSubmit = function (imageURL) {
     var email = $('#email').val().trim();
     var rightBox = $('#rightBox').val().trim();
     var imageLink = imageURL;
-    var facebook = $('#facebookURL');
-    var linkedIn = $('#linkedIn');
+    var facebook = $('#facebook').val().trim();
+    var linkedIn = $('#linkedIn').val().trim();
 
     var newSubmit = {
         name: name,
         artTitle: title,
-        facebookURL: facebook,
+        facebookURL: facebook || 'facebook.com/#blank',
         location: state,
-        linkedInURL: linkedIn,
+        linkedInURL: linkedIn || 'linkedin.com/#blank',
         category: medium,
-        email: email,
+        email: email || '#@yahoo.com',
         photoURL: imageLink,
         description: rightBox
     }
 
     $('#submitbtn').on('click', (event) => {
-        $.post("/api/submissions/", newSubmit, function () {
-            window.location.href = "/home";
+        console.log(newSubmit);
+        $.post("/api/submissions", newSubmit, function () {
+
+        }).then(() => {
+            console.log(newSubmit);
         });
     });
 

@@ -41,20 +41,20 @@ function getPosts(mediumQuery, stateQuery) {
 
 
 
-launchGallery = function () {
+launchGallery = function (submissions) {
     artContainer.empty();
     var submissionsToAdd = [];
-    for (var i = 0; i < 2; i++) {
+    for (var i = 0; i < submissions.length; i++) {
         console.log(submissions[i]);
-        submissionsToAdd.push(createNewRow(submissions[i]));
+        submissionsToAdd.push(createNewRow(submissions[i], i));
     }
     artContainer.append(submissionsToAdd);
 };
 
-function createNewRow(submission) {
+function createNewRow(submission, idx) {
     var name = submission.name;
     var email = submission.email || '';
-    var photoURL = submission.PhotoURL;
+    var photoURL = submission.photoURL;
     var description = submission.description;
     var facebookURL = submission.facebookURL || "#";
     var linkedInURL = submission.linkedInURL || "#";
@@ -62,7 +62,7 @@ function createNewRow(submission) {
 
     var newPost = $(`
     <div class="col-lg-4 col-md-12 mb-4">
-            <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            <div class="modal fade" id="modal${idx}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
@@ -97,7 +97,7 @@ function createNewRow(submission) {
             </div>
             <a><img class="img-fluid z-depth-1"
                     src="${photoURL}"
-                    alt="video" data-toggle="modal" data-target="#modal"></a>
+                    alt="video" data-toggle="modal" data-target="#modal${idx}">${name}</a>
         </div>
     `);
 

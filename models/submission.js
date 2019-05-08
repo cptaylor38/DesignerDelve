@@ -1,17 +1,17 @@
 module.exports = (sequelize, DataTypes) => {
-  var Submissions = sequelize.define("Submissions", {
+  var Submission = sequelize.define("Submission", {
     name: {
       type: DataTypes.STRING,
+      allowNull: false,
       validate: {
-        allowNull: false,
-        len: [5, 50]
+        len: [1, 50]
       }
     },
     artTitle: {
       type: DataTypes.STRING,
+      allowNull: false,
       validate: {
-        allowNull: false,
-        len: [5, 50]
+        len: [1, 50]
       }
     },
     facebookURL: {
@@ -41,18 +41,18 @@ module.exports = (sequelize, DataTypes) => {
     },
     photoURL: {
       type: DataTypes.STRING,
+      allowNull: false,
       validate: {
-        allowNull: false,
         isUrl: true
       }
     },
     description: {
       type: DataTypes.TEXT,
+      allowNull: false,
       validate: {
-        allowNull: false,
-        len: [200, 2000]
+        len: [5, 2000]
       }
     }
-  });
-  return Submissions;
+  }, { timestamps: false });
+  return Submission;
 }
