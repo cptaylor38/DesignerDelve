@@ -18,43 +18,35 @@ $(document).ready(() => {
         event.preventDefault();
         var stateQuery = $('#state').val();
         var mediumQuery = $('#medium').val();
-        getPosts();
-        function getPosts(medium, state) {
-            var queryString;
-            if (!stateQuery || !mediumQuery) {
-                console.log('both dropdowns empty');
-            }
-            else if (!stateQuery && mediumQuery) {
-                queryString = `/${mediumQuery}`;
-            }
-            else if (!mediumQuery && stateQuery) {
-                queryString = `/${stateQuery}`;
-            }
-            else if (mediumQuery && stateQuery) {
-                queryString = `/${mediumQuery}/${stateQuery}`;
-            }
-
-            $.get("/api/gallery" + queryString, function (data) {
-                console.log("Submissions", data);
-                submissions = data;
-                if (!posts || !posts.length) {
-                    displayEmpty();
-                }
-                else {
-                    launchGallery();
-                }
-            });
-        }
+        getPosts(mediumQuery, stateQuery);
     });
 });
+
+function getPosts(mediumQuery, stateQuery) {
+    var queryString = `/${mediumQuery}/${stateQuery}`
+    console.log(queryString);
+
+    $.get("/api/submissions" + queryString, function (data) {
+        console.log("Submissions", data);
+        submissions = data;
+        if (!submissions || !submissions.length) {
+            // displayEmpty();
+            console.log('data undefined');
+        }
+        else {
+            launchGallery(data);
+        }
+    });
+}
 
 
 
 launchGallery = function () {
     artContainer.empty();
     var submissionsToAdd = [];
-    for (var i = 0; i < submissions.length; i++) {
-        postsToAdd.push(createNewRow(submissions[i]));
+    for (var i = 0; i < 2; i++) {
+        console.log(submissions[i]);
+        submissionsToAdd.push(createNewRow(submissions[i]));
     }
     artContainer.append(submissionsToAdd);
 };
@@ -62,11 +54,11 @@ launchGallery = function () {
 function createNewRow(submission) {
     var name = submission.name;
     var email = submission.email || '';
-    var photoURL = data.PhotoURL;
-    var description = data.description;
-    var facebookURL = data.facebookURL || "#";
-    var linkedInURL = data.linkedInURL || "#";
-    var title = data.artTitle;
+    var photoURL = submission.PhotoURL;
+    var description = submission.description;
+    var facebookURL = submission.facebookURL || "#";
+    var linkedInURL = submission.linkedInURL || "#";
+    var title = submission.artTitle;
 
     var newPost = $(`
     <div class="col-lg-4 col-md-12 mb-4">

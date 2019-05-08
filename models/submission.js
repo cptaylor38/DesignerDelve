@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  var Submission = sequelize.define("Submission", {
+  var Submissions = sequelize.define("Submissions", {
     name: {
       type: DataTypes.STRING,
       validate: {
@@ -15,6 +15,9 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     facebookURL: {
+      type: DataTypes.STRING
+    },
+    location: {
       type: DataTypes.STRING
     },
     linkedInURL: {
@@ -41,5 +44,5 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   });
-  return Submission;
+  return Submissions;
 }

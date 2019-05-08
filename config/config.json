@@ -2,16 +2,18 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "submissions",
+    "database": "submissions_db",
     "host": "localhost",
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "root",
-    "database": "submissions",
+    "database": "submissions_db",
     "host": "localhost",
     "dialect": "mysql",
+    "port": 3306,
     "logging": false
   },
   "production": {
