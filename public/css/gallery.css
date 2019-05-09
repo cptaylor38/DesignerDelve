@@ -151,6 +151,12 @@
   padding: 20px;
 }
 
+.artContainer
+{
+  display: flex;
+  flex-flow: row wrap;
+}
+
 
     
 
