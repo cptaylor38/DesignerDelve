@@ -56,6 +56,7 @@ postSubmit = function (imageURL) {
 
         }).then(() => {
             console.log(newSubmit);
+            window.location.href = '/submission';
         });
     });
 
