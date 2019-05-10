@@ -6,6 +6,7 @@ var myWidget = cloudinary.createUploadWidget({
     if (!error && result && result.event === "success") {
         imageURL = result.info.secure_url;
         console.log('Done! Here is the image info: ', result.info.secure_url);
+        $('#upload').append('<h1>Upload Successful');
         postSubmit(imageURL);
     }
 });
@@ -39,16 +40,17 @@ postSubmit = function (imageURL) {
     var newSubmit = {
         name: name,
         artTitle: title,
-        facebookURL: facebook || 'facebook.com/#blank',
+        facebookURL: facebook || 'facebook.com/not_submitted',
         location: state,
-        linkedInURL: linkedIn || 'linkedin.com/#blank',
+        linkedInURL: linkedIn || 'linkedin.com/not_submitted',
         category: medium,
-        email: email || '#@yahoo.com',
+        email: email || 'not_submitted@email.com',
         photoURL: imageLink,
         description: rightBox
     }
 
     $('#submitbtn').on('click', (event) => {
+        $('#upload').empty();
         console.log(newSubmit);
         $.post("/api/submissions", newSubmit, function () {
 

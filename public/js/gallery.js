@@ -53,11 +53,11 @@ launchGallery = function (submissions) {
 
 function createNewRow(submission, idx) {
     var name = submission.name;
-    var email = submission.email || '';
+    var email = submission.email || ' ';
     var photoURL = submission.photoURL;
     var description = submission.description;
-    var facebookURL = submission.facebookURL || "#";
-    var linkedInURL = submission.linkedInURL || "#";
+    var facebookURL = submission.facebookURL || ' ';
+    var linkedInURL = submission.linkedInURL || ' ';
     var title = submission.artTitle;
 
     var newPost = $(`
@@ -67,24 +67,24 @@ function createNewRow(submission, idx) {
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-body mb-0 p-0">
-                            <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                                <iframe class="embed-responsive-item"
-                                    src="${photoURL}"
-                                    allowfullscreen></iframe>
-                            </div>
+                            <img src="${photoURL}" style='height: 100%; width: 100%;'
+                                    allowfullscreen></img>
                             <div class='artInfo container'>
-                                    <div class='row artInfoRow'>
+                                <div class='headerDescription-modal'>
+                                    <div class='row artInfoRow' id='artTitle-modal'>
                                         <h1>${title}</h1>
                                     </div>
-                                    <div class='row artInfoRow'>
-                                        <h4>${name}</h4>
-                                        <h6>${email}</h6>
-                                        <h6>${location}</h6>
-                                    </div>
-                                    <div class='row artInfoRow descriptionRow'>
-                                        <p class="mr-4">${description}</p>
+                                    <div class='row artInfoRow' id='artistInfo-modal'>
+                                        <div class='contactInfo'>
+                                            <h2>${name}</h2>
+                                            <p>${email}</p>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class='row artInfoRow descriptionRow' style='display:block; text-align: center;'>
+                                    <p class="mr-4">${description}</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer justify-content-center">
                             <a href='${facebookURL}' type='button' target='_blank' class="btn-floating btn-sm btn-fb"><i class="fab fa-facebook-f"></i></a>
@@ -95,9 +95,10 @@ function createNewRow(submission, idx) {
                     </div>
                 </div>
             </div>
-            <a><img class="img-fluid z-depth-1"
-                    src="${photoURL}"
-                    alt="video" data-toggle="modal" data-target="#modal${idx}">${name}</a>
+            <a id='modalPop'>
+                <img class="img-fluid z-depth-1"
+                    src="${photoURL}" alt="video" data-toggle="modal" data-target="#modal${idx}"><h5 style='text-align:center; margin-top: 10px;'>${name}</h5>
+            </a>
         </div>
     `);
 
