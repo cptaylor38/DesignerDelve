@@ -56,8 +56,8 @@ function createNewRow(submission, idx) {
     var email = submission.email || ' ';
     var photoURL = submission.photoURL;
     var description = submission.description;
-    var facebookURL = submission.facebookURL || ' ';
-    var linkedInURL = submission.linkedInURL || ' ';
+    var facebookURL = submission.facebookURL || '#';
+    var linkedInURL = submission.linkedInURL || '#';
     var title = submission.artTitle;
 
     var newPost = $(`
@@ -87,8 +87,8 @@ function createNewRow(submission, idx) {
                             </div>
                         </div>
                         <div class="modal-footer justify-content-center">
-                            <a href='${facebookURL}' type='button' target='_blank' class="btn-floating btn-sm btn-fb"><i class="fab fa-facebook-f"></i></a>
-                            <a href='${linkedInURL}' type='button' target='_blank' class="btn-floating btn-sm btn-ins"><i class="fab fa-linkedin-in"></i></a>
+                        <a href='${facebookURL}' type='button' target='_blank' class="btn-floating btn-sm btn-fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href='${linkedInURL}' type='button' target='_blank' class="btn-floating btn-sm btn-ins"><i class="fab fa-linkedin-in"></i></a>
                             <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4"
                                 data-dismiss="modal">Close</button>
                         </div>
@@ -105,3 +105,7 @@ function createNewRow(submission, idx) {
 
     return newPost;
 }
+
+
+
+
