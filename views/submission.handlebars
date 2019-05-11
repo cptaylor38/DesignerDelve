@@ -1,6 +1,6 @@
 <div class="jumbotron jumbotron-fluid headerJumbo">
     <div class="container" id='titleHeader'>
-        <h1 class="display-4">Designer Delve</h1>
+        <h1 class="display-4" id='pageTitle'>Designer Delve</h1>
         <p class="lead">Welcome to our gallery, a menagerie of mediums.</p>
         <div id="nav">
 
@@ -19,8 +19,8 @@
 <div class='formContainer container'>
     <div class='container subForm'>
         <div class='row'>
-            <div class='col-lg-6 col-md-12 col-sm-12'>
-                <label for="artistName">Name</label>
+            <div class='col-lg-6 col-md-12 col-sm-12' id='formArea'>
+                <label for="artistName">Name (Required)</label>
                 <input type="text" id="name" name="artistName" placeholder="Who are you?">
                 <label for="medium">Category</label>
                 <select id="medium" name="medium">
@@ -31,7 +31,7 @@
                     <option value="Ceramics">Ceramics</option>
                     <option value="Painting">Painting</option>
                 </select>
-                <label for="fname">Title</label>
+                <label for="fname">Title (Required)</label>
                 <input type="text" id="title" name="artTitle" placeholder="Title of your art...">
                 <label for="state">State</label>
                 <select id="state" name="state">
@@ -87,19 +87,20 @@
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
                 </select>
-                <label for='facebook'>Facebook url:</label>
-                <input type='text' id='facebook' name='facebook' placeholder="Facebook url: (optional)">
-                <label for='linkedIn'>LinkedIn url:</label>
-                <input type='text' id='linkedIn' name='linkedIn' placeholder="LinkedIn url: (optional)">
+                <label for='facebook'>Facebook url: (Optional)</label>
+                <input type='text' id='facebook' name='facebook' placeholder="Facebook url:">
             </div>
             <div class='col-lg-6 col-md-12 col-sm-12 submitCol'>
-                <label for="email">Email address:</label>
+                <label for='linkedIn'>LinkedIn url: (Optional)</label>
+                <input type='text' id='linkedIn' name='linkedIn' placeholder="LinkedIn url:">
+                <label for="email">Email address: (Optional)</label>
                 <input type="text" id="email" name="email" placeholder="Email for inquirers:">
                 <form>
-                    <label for='rightBox'>Describe your art:</label>
-                    <textarea placeholder="Description of your art..." id="rightBox"></textarea>
+                    <label for='rightBox'>Describe your art: (Required)</label>
+                    <textarea placeholder="Description of your art..." id="rightBox" style='width: 100%;'></textarea>
                 </form>
                 <button id="upload_widget" class="cloudinary-button">Upload files</button>
+                <div id='upload' style='text-align: center; margin-left: 30px; color: aqua;'></div>
             </div>
         </div>
         <div class='row'>
