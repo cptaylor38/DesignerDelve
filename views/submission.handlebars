@@ -1,6 +1,6 @@
 <div class="jumbotron jumbotron-fluid headerJumbo">
     <div class="container" id='titleHeader'>
-        <h1 class="display-4">Designer Delve</h1>
+        <h1 class="display-4" id='pageTitle'>Designer Delve</h1>
         <p class="lead">Welcome to our gallery, a menagerie of mediums.</p>
         <div id="nav">
 
@@ -89,15 +89,15 @@
                 </select>
                 <label for='facebook'>Facebook url: (Optional)</label>
                 <input type='text' id='facebook' name='facebook' placeholder="Facebook url:">
-                <label for='linkedIn'>LinkedIn url: (Optional)</label>
-                <input type='text' id='linkedIn' name='linkedIn' placeholder="LinkedIn url:">
             </div>
             <div class='col-lg-6 col-md-12 col-sm-12 submitCol'>
+                <label for='linkedIn'>LinkedIn url: (Optional)</label>
+                <input type='text' id='linkedIn' name='linkedIn' placeholder="LinkedIn url:">
                 <label for="email">Email address: (Optional)</label>
                 <input type="text" id="email" name="email" placeholder="Email for inquirers:">
                 <form>
                     <label for='rightBox'>Describe your art: (Required)</label>
-                    <textarea placeholder="Description of your art..." id="rightBox"></textarea>
+                    <textarea placeholder="Description of your art..." id="rightBox" style='width: 100%;'></textarea>
                 </form>
                 <button id="upload_widget" class="cloudinary-button">Upload files</button>
                 <div id='upload' style='text-align: center; margin-left: 30px; color: aqua;'></div>
