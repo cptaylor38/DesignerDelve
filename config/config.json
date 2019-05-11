@@ -4,7 +4,6 @@
     "password": "root",
     "database": "submissions_db",
     "host": "localhost",
-    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
@@ -13,7 +12,6 @@
     "database": "submissions_db",
     "host": "localhost",
     "dialect": "mysql",
-    "port": 3306,
     "logging": false
   },
   "production": {
