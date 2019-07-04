@@ -30,13 +30,18 @@ function getPosts(mediumQuery, stateQuery) {
         console.log("Submissions", data);
         submissions = data;
         if (!submissions || !submissions.length) {
-            // displayEmpty();
+            noDataFound();
             console.log('data undefined');
         }
         else {
             launchGallery(data);
         }
     });
+}
+
+noDataFound = function () {
+    artContainer.empty()
+    artContainer.append('<h1>No submissions for this criteria yet.</h1>');
 }
 
 
