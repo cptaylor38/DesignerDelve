@@ -1,5 +1,8 @@
 # project2testrepo
 
+[Designer Delve](https://whispering-escarpment-60858.herokuapp.com/)
+
+
 Todos:
 
 1. Update read me following bug fixes.
@@ -7,6 +10,7 @@ Todos:
 3. Take another look at the widget behavior - widget not functioning in the correct order with the rest of the submission form.
 4. Might be some other missing input validation.
 5. Add Instagram button to modal.
+6. Second pass at responsiveness.
 
 
 Update: Removed blank targets on links that opened up new windows. 
