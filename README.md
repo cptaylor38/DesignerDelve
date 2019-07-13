@@ -1,7 +1,4 @@
-# project2testrepo
-
-[Designer Delve](https://whispering-escarpment-60858.herokuapp.com/)
-
+# [Designer Delve](https://whispering-escarpment-60858.herokuapp.com/)
 
 This application welcomes users with an initial landing page, then redirects to the home page.
 
