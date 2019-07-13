@@ -3,20 +3,22 @@
 [Designer Delve](https://whispering-escarpment-60858.herokuapp.com/)
 
 
-Todos:
+This application welcomes users with an initial landing page, then redirects to the home page.
 
-1. Update read me following bug fixes.
-<strike>2. Gallery search is not clearing upon unnsuccessful response - No entries found for category and state not emptying gallery/modal container or giving user feedback that there were no entries found for those searches.</strike>
-3. Take another look at the widget behavior - widget not functioning in the correct order with the rest of the submission form.
-4. Might be some other missing input validation.
-5. Add Instagram button to modal.
-6. Second pass at responsiveness.
+On the home page there are two options: 
 
+  Click "View Gallery" - 
+    Search by medium on the left, and state on the right, at the top. If art has been submitted that meet those criteria the images will load underneath. The images are modal dialog buttons that will display a modal with the full-size image, a description, the artist's name, the title of the art, the artist's email address, and a link to their Facebook and LinkedIn for means of contact. 
+  
+  Click "Submit Your Work" -
+    If you are an artist looking to submit your own artwork, you are redirected to a form with 6 required fields, your name, the title of your submission, a description of your submission, the category(medium) of your art, your state, and your uploaded image. There are additional optional fields such as email, LinkedIn, and Facebook to allow users looking through the gallery means to contact you should they want to connect.
+    
+The button at the top, ("Not what you're looking for?"), will open the side navbar for site navigation.
+  
 
-Update: Removed blank targets on links that opened up new windows. 
-
-
-Brief rundown of this project: - A simple gallery/artwork submission idea to allow people to connect with local artists with a selection of mediums to choose from, and for those local artists to submit their work to be viewed. 
 
 MySQL was used for the database and a cloudinary widget was used for image uploads and image url creation for the database.
 Other tech used - handlebars.js, jquery, GreenSock(GSAP), node and express.
+
+
+Some additional responsiveness checks and cross-brwoser compatability can be implemented to ensure a more versatile experience.
