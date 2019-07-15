@@ -75,12 +75,19 @@ body {
     }
   }
 
-.primaryContainer {
-  padding: 40px; }
-
-.createCol {
+.primaryContainer 
+{
+  padding: 40px; 
   display: flex;
-  flex-flow: column wrap; }
+  flex-flow: row wrap;
+}
+
+.createCol 
+{
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center; 
+}
 
 .contentLink
 {
@@ -89,6 +96,18 @@ body {
   font-family: 'BeonRegular';
   color: rgba(0, 0, 0, 0.6);
   text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3); 
+}
+
+#submitLink
+{
+  display: flex;
+  justify-content: center;
+}
+
+#galleryLink
+{
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1450px) {
