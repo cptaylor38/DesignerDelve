@@ -15,7 +15,6 @@ module.exports = function (app) {
     res.render("home",
       {
         style: "home.css",
-        script: "home.js",
         title: "Home, Welcome!"
       });
   });

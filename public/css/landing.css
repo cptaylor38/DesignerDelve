@@ -81,7 +81,7 @@ button {
   transform-origin: bottom; }
 
 .panel img {
-  width: 120px;
+  width: 100%;
   float: left;
   margin-right: 50px;
   opacity: 0;
