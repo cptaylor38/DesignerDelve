@@ -26,3 +26,6 @@ Other tech used - handlebars.js, jquery, GreenSock(GSAP), node and express.
 
 
 Some additional responsiveness checks and cross-brwoser compatability can be implemented to ensure a more versatile experience.
+
+
+
