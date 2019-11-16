@@ -1,4 +1,4 @@
-# [Designer Delve](https://whispering-escarpment-60858.herokuapp.com/)
+# [Designer Delve](https://designer-delve.herokuapp.com/)
 
 This application welcomes users with an initial landing page, then redirects to the home page.
 ![landing](./public/images/landing.png)
